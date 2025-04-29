@@ -1,6 +1,7 @@
 package org.example.Elements;
 
 import org.example.factory.DriverFactory;
+import org.example.factory.LocatorFactory;
 import org.example.factory.LoginFactory;
 import org.example.utils.ElementLocators;
 import org.openqa.selenium.By;
@@ -23,9 +24,9 @@ public class Dropdown implements TestInterface {
         // Login to the application
         LoginFactory.login();
 
-        DriverFactory.switchToFrame(ElementLocators.HOME_PAGE_FRAME);
+//        DriverFactory.switchToFrame(ElementLocators.HOME_PAGE_FRAME);
 
-        WebElement dropdown = DriverFactory.findElement(By.name("loc_code"));
+        WebElement dropdown = DriverFactory.findElement(LocatorFactory.getById("dropdown-class-example"));
 
         List<WebElement> dropdownElements =  dropdown.findElements(By.tagName("option"));
 
@@ -39,7 +40,9 @@ public class Dropdown implements TestInterface {
         Thread.sleep(5000);
 
         // Select another option (e.g., index 3)
-        select.selectByVisibleText("Emp. Last Name");
+        select.selectByVisibleText("Option2");
+
+
 
     }
 }
