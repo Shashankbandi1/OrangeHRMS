@@ -21,8 +21,6 @@ public class Dropdown implements TestInterface {
 
     @Override
     public void test() throws InterruptedException {
-        // Login to the application
-        LoginFactory.login();
 
 //        DriverFactory.switchToFrame(ElementLocators.HOME_PAGE_FRAME);
 

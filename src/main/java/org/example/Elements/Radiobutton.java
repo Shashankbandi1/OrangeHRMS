@@ -7,14 +7,14 @@ import org.openqa.selenium.WebElement;
 public class Radiobutton implements TestInterface {
     @Override
     public void test() throws InterruptedException {
-        WebElement radio = DriverFactory.findElement(LocatorFactory.getByXpath("//input[text() = 'radio3']"));
+        WebElement radio = DriverFactory.findElement(LocatorFactory.getByXpath("//label[contains(.,'Radio2')]//input[@type='radio']"));
         radio.click();
         if(radio.isSelected()) {
-            System.out.println("Radio button selected");
+            String selectedValue = radio.getAttribute("value");
+            System.out.println("Radio button selected: " + selectedValue);
         }else {
             System.out.println("Radio button not selected");
         }
-        DriverFactory.quit();
     }
 
 
