@@ -12,7 +12,7 @@ public class AlertPopup implements TestInterface{
         Alert alert = DriverFactory.switchToAlert();
         String alertText = alert.getText();
         System.out.println("Alert text is: " + alertText);
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         alert.accept();
     }
 }
