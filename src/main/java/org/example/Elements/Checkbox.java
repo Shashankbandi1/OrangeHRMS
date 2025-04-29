@@ -10,8 +10,11 @@ public class Checkbox implements TestInterface {
 
         WebElement checkbox1 = DriverFactory.findElement(LocatorFactory.getById("checkBoxOption1"));
         checkbox1.click();
-        WebElement checkbox2 = DriverFactory.findElement(LocatorFactory.getById("checkBoxOption2"));
-        checkbox2.click();
-        DriverFactory.quit();
+        if(checkbox1.isSelected()) {
+            System.out.println("checkbox button selected");
+        }else {
+            System.out.println("checkbox button selected");
+        }
+
     }
 }

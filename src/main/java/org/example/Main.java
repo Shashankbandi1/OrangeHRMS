@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.Elements.Checkbox;
 import org.example.Elements.Dropdown;
+import org.example.Elements.Radiobutton;
 import org.example.factory.DriverFactory;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -18,6 +19,10 @@ public class Main {
         //CheckBox testing
         Checkbox checkBox = new Checkbox();
         checkBox.test();
+
+        //RadioButton testing
+        Radiobutton radioButton = new Radiobutton();
+        radioButton.test();
 
     }
 }
