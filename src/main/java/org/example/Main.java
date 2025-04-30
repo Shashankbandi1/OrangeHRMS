@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.Elements.AlertPopup;
-import org.example.Elements.Checkbox;
-import org.example.Elements.Dropdown;
-import org.example.Elements.Radiobutton;
+import org.example.Elements.*;
 import org.example.factory.DriverFactory;
 import org.example.factory.LoginFactory;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -31,6 +28,10 @@ public class Main {
         AlertPopup alertPopup = new AlertPopup();
         alertPopup.test();
 
-//        DriverFactory.quit();
+        //Window handling
+        WindowHandles windowHandling = new WindowHandles();
+        windowHandling.test();
+
+       DriverFactory.quit();
     }
 }

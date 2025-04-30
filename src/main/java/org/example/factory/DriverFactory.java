@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.List;
+import java.util.Set;
 
 public class DriverFactory {
     private static WebDriver driver;
@@ -43,5 +44,10 @@ public class DriverFactory {
     public static Alert switchToAlert() {
         return driver.switchTo().alert();
     }
-   
+   public static Set<String> getWindowHandles() {
+        return driver.getWindowHandles();
+    }
+    public static void switchToWindow(String windowHandle) {
+        driver.switchTo().window(windowHandle);
+    }
 }
